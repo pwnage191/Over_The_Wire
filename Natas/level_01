@@ -1,0 +1,27 @@
+## Challenge:
+Start here:
+Username: natas1
+Password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+URL:      http://natas1.natas.labs.overthewire.org 
+
+## My Path:
+Method 1:
+  - I opened the website.
+  - It shows "You can find the password for the next level on this page, but rightclicking has been blocked!"
+  - I tried to right-click, but a popup displayed "right clicking has been blocked!".
+  - I searched for a shortcut for right‑click on Google, and it showed Shift + F10.
+  - It didn’t work.
+  - Next, I used the shortcut for view page source (Ctrl + U).
+  - It worked. One of the comments held the password for the next level.
+
+Method 2:
+  - I used the key "F12" to open the dev tools.
+  - Go to the elements tab, see the code, One of the comments held the password for the next level.
+
+Method 3:
+  - I use Google to know how to unblock the right-click.
+  - Open DevTools (F12 or Ctrl+Shift+I).
+  - Open DevTools settings (gear icon or F1).
+  - Disable JavaScript in the settings panel.
+  - Reload the page to bypass the right-click block.
+  - Now, it allows you to right-click.
