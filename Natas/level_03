@@ -14,19 +14,19 @@ URL:      http://natas3.natas.labs.overthewire.org
   - I visited that directory, it revealed the file name "users.txt".
   - It contained the password for the next level.
 
-## Learning Outcomes
+## Learning Outcomes:
   - Identified robots.txt as a place to discover restricted paths.
   - Recognized that disallowed paths can still be accessed manually.
 
-## Real-World Mapping
+## Real-World Mapping:
   - robots.txt can unintentionally expose sensitive directories to attackers.
   - Disallow rules only guide crawlers; they do not enforce security.
 
-## Bug Class
+## Bug Class:
   - Information Disclosure – sensitive paths and data revealed.
   - Insecure Direct Object Reference (IDOR-like access) – accessing files directly without restrictions.
   - Improper Access Control – directories allowed public access.
 
-## Conclusion
+## Conclusion:
 A clue in the source led to robots.txt, which exposed a hidden directory containing a file with the next password,
 demonstrating how poor access control and exposed paths can leak sensitive information.
