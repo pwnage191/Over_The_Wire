@@ -1,0 +1,41 @@
+## Challenge:
+Start here:
+Username: natas9
+Password: ( Password obtained from previous level ) 
+URL:      http://natas9.natas.labs.overthewire.org 
+
+## My path: 
+  - I opened the website.
+  - It had an input box, asking you to enter the "Find words containing" & also had the view page source.
+  - I clicked the view page source. It contained the php logic code.
+  - It contained the file name dictionary.txt, i opened that file, it had the list of words.
+  - In the code, I saw the line "passthru("grep -i $key dictionary.txt");".
+  - I used Google to learn that passthru executes system commands, similar to exec().
+  - So, it is a command line injection.
+  - Case 1:
+      When I entered the "hello" into the input, the program executes "grep -i hello dictionary.txt".
+      This searches for the word "hello" (case‑insensitive) inside dictionary.txt and prints matching lines.
+  - Case 2:
+      When I entered the "cat /etc/natas_webpass/natas10", It only takes cat to search inside the dictionary.txt, 
+      and showed the matching letter.because the input is appended directly after grep, not executed as a separate command.
+  - Case 3:
+      So, When I entered hello;cat /etc/natas_webpass/natas10, the php code executes two separate commands,
+      grep -i hello dictionary.txt; cat /etc/natas_webpass/natas10.
+  - It revealed the password for the next level.
+
+## Learning Outcomes:
+  - Understand how unsanitized input reaches system commands.
+  - Learn that passthru() executes OS commands on the server.
+  - See how command injection works using ; to chain commands.
+
+## Real‑World Mapping:
+  - Attackers inject commands into poorly validated parameters.
+  - Similar issues appear in search boxes, file imports.
+
+## Bug Class:
+  - Command Injection: User input is executed as system commands instead of treated as plain data.
+
+## Conclusion:
+This challenge shows why user input must be sanitized before executing commands.
+Even simple concatenation of input to shell commands can allow attackers to execute arbitrary commands and steal sensitive files.
+
