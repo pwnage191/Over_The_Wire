@@ -1,0 +1,11 @@
+## Challenge:
+Start here:
+Username: natas10
+Password: ( Password obtained from previous level ) 
+URL:      http://natas10.natas.labs.overthewire.org 
+
+## My path: 
+  - I opened the website.
+  - It had an input box, asking you to enter the "Find words containing" & also had the view page source.
+  - I clicked the view page source. It contained the php logic code.
+  - 
