@@ -6,6 +6,36 @@ URL:      http://natas10.natas.labs.overthewire.org
 
 ## My path: 
   - I opened the website.
-  - It had an input box, asking you to enter the "Find words containing" & also had the view page source.
-  - I clicked the view page source. It contained the php logic code.
-  - 
+  - It showed an input box labeled 'Find words containing' and a view page source link.
+  - I clicked view page source. It contained the php logic code.
+  - In the php code, it contained the logic, 
+    if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+  - In that code, preg_match only blocks ;, |, and &.It doesn’t block space, so input validation is weak.
+  - We can inject an extra filename because the input becomes part of the grep command.
+  - A space splits the input into separate arguments, so grep treats the next text as a second file name.
+  - A space after my input splits arguments, so grep treats /etc/natas_webpass/natas11 as an extra file. Since grep searches in both files, 
+    the password line also gets printed.
+  - Payloads: 1 /etc/natas_webpass/natas11, .* /etc/natas_webpass/natas11, the key part is the space + filename injection.
+  - It revealed the next level password.
+
+## Learning Outcomes:
+  - Understand how input flows into system commands via passthru().
+  - Learn that filtering some characters is not enough for preventing injection.
+  - Discover how grep accepts multiple filenames as arguments.
+  - Observe how wildcard patterns like .* behave in command execution.
+
+## Real-World Mapping:
+  - Partial input sanitization still leaves applications vulnerable.
+  - Attackers often bypass blacklists by abusing existing program features.
+
+## Bug Class:
+Command Injection – untrusted user input is interpreted as part of a system command instead of treated as plain text.
+
+## Conclusion:
+The input was passed directly into a shell command without proper sanitization, allowing us to inject another filename. This
+led to arbitrary file read using grep, revealing the next level password.
