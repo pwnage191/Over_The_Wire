@@ -1,0 +1,22 @@
+## Challenge:
+Start here:
+Username: natas12
+Password: ( Password obtained from previous level ) 
+URL:      http://natas12.natas.labs.overthewire.org 
+
+## My path: 
+  - I opened the website.
+  - The page showed a file upload form with the message: "Choose a JPEG to upload (max 1KB)".
+  - I noticed a view sourcecode link and clicked it.
+  - In the PHP source code, I observed the file upload logic.
+  - Generates a random filename, takes the extension from the user controlled filename field, Does not validate the actual file content.
+  - Does not enforce .jpg extension on the server side.
+  - I created a PHP payload file:
+            <?php
+            echo file_get_contents('/etc/natas_webpass/natas13');
+            ?>
+  - I saved it as shell.php on my laptop.
+  - Open browser dev tools (Inspect -> Elements), Change: filename=random.php and upload the file.
+  - The server generated a random file name, gave me a clickable link to the uploaded file.
+  - I clicked the uploaded file URL. Because the file extension was .php, the server executed the php code.
+  - It revealed the next level password.
