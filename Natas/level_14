@@ -1,0 +1,43 @@
+## Challenge:
+Start here:
+Username: natas14
+Password: ( Password obtained from previous level ) 
+URL:      http://natas14.natas.labs.overthewire.org 
+
+## My path: 
+  - I opened the website.
+  - It asked the user to enter the username and password.
+  - First I tried random username and password, I tried to know sql injection is exist or not.
+  - I tried single quote and then double quotes, when I try double quotes, it showed the error.
+  - It displayed mysqli_num_rows() expects parameter 1 to be mysqli_result. It is MYSQL database.
+  - Next, I saw the source code link.
+  - It contained, " "SELECT * from users where username=\"".$_REQUEST["username"]."\" and password=\"".$_REQUEST["password"]."\"";".
+       if(mysqli_num_rows(mysqli_query($link, $query)) > 0) {
+            echo "Successful login! The password for natas15 is <censored><br>";
+  - The application only checks whether the database returned at least one row, if yes, login succeeds and the next level password is 
+    shown, if no, access is denied.
+  - Rows are returned not because usernames match, but because the WHERE condition evaluates to TRUE for that row.
+  - My payload works by changing the database’s check so the condition becomes always true, causing it to return
+    a row even though the username and password are wrong.
+  - Payload: admin" OR "1"="1" -- " 
+  - I give a wrong value in one part, inject a condition 1=1 using OR, and comment out the rest.
+  - It revealed the next level password.
+
+## Learning Outcomes:
+  - Understood how SQL checks conditions as true or false.
+  - Learned how changing logic can bypass authentication.
+  - Developed the mindset of attacking logic, not values.
+
+## Real-World Mapping:
+  - This vulnerability appears in login pages of real websites.
+  - Attackers can log in without valid credentials.
+  - No input validation are used.
+
+## Bug Class:
+  - SQL Injection (Authentication Bypass)
+  - User input changes the SQL logic so the login condition always evaluates to true.
+
+## Conclusion:
+  - The application trusted user input and only checked if the database returned a row.
+  - By forcing the SQL condition to be true, authentication was bypassed.
+  - This level teaches the core foundation of SQL injection logic.
