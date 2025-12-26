@@ -8,8 +8,10 @@ URL:      http://natas14.natas.labs.overthewire.org
   - I opened the website.
   - It asked the user to enter the username and password.
   - First I tried random username and password, I tried to know sql injection is exist or not.
-  - I tried single quote and then double quotes, when I try double quotes, it showed the error.
-  - It displayed mysqli_num_rows() expects parameter 1 to be mysqli_result. It is MYSQL database.
+  - I tried single quote and then double quotes.
+  - When I entered a double quote ("), the application showed a MySQL related error (mysqli_num_rows() warning).
+  - This error occurred because my input broke the SQL query syntax.
+  - The error proves that my input is directly inserted into the SQL query without sanitization.
   - Next, I saw the source code link.
   - It contained, " "SELECT * from users where username=\"".$_REQUEST["username"]."\" and password=\"".$_REQUEST["password"]."\"";".
        if(mysqli_num_rows(mysqli_query($link, $query)) > 0) {
