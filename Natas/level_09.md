@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas9
-Password: ( Password obtained from previous level ) 
-URL:      http://natas9.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas9
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas9.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - It had an input box, asking you to enter the "Find words containing" & also had the view page source.
   - I clicked the view page source. It contained the php logic code.
@@ -23,19 +23,19 @@ URL:      http://natas9.natas.labs.overthewire.org
       grep -i hello dictionary.txt; cat /etc/natas_webpass/natas10.
   - It revealed the password for the next level.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Understand how unsanitized input reaches system commands.
   - Learn that passthru() executes OS commands on the server.
   - See how command injection works using ; to chain commands.
 
-## Real‑World Mapping:
+#### Real‑World Mapping:
   - Attackers inject commands into poorly validated parameters.
   - Similar issues appear in search boxes, file imports.
 
-## Bug Class:
+#### Bug Class:
   - Command Injection: User input is executed as system commands instead of treated as plain data.
 
-## Conclusion:
+#### Conclusion:
 This challenge shows why user input must be sanitized before executing commands.
 Even simple concatenation of input to shell commands can allow attackers to execute arbitrary commands and steal sensitive files.
 
