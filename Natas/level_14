@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas14
-Password: ( Password obtained from previous level ) 
-URL:      http://natas14.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas14
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas14.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - It asked the user to enter the username and password.
   - First I tried random username and password, I tried to know sql injection is exist or not.
@@ -25,21 +25,21 @@ URL:      http://natas14.natas.labs.overthewire.org
   - I give a wrong value in one part, inject a condition 1=1 using OR, and comment out the rest.
   - It revealed the next level password.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Understood how SQL checks conditions as true or false.
   - Learned how changing logic can bypass authentication.
   - Developed the mindset of attacking logic, not values.
 
-## Real-World Mapping:
+#### Real-World Mapping:
   - This vulnerability appears in login pages of real websites.
   - Attackers can log in without valid credentials.
   - No input validation are used.
 
-## Bug Class:
+#### Bug Class:
   - SQL Injection (Authentication Bypass)
   - User input changes the SQL logic so the login condition always evaluates to true.
 
-## Conclusion:
+#### Conclusion:
   - The application trusted user input and only checked if the database returned a row.
   - By forcing the SQL condition to be true, authentication was bypassed.
   - This level teaches the core foundation of SQL injection logic.
