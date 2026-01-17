@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas11
-Password: ( Password obtained from previous level ) 
-URL:      http://natas11.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas11
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas11.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - The page showed "Cookies are protected with XOR encryption" and view page code link.
   - I clicked view page code link, In the PHP source code, I noticed a cookie named data was used to store user preferences.
@@ -39,20 +39,20 @@ URL:      http://natas11.natas.labs.overthewire.org
   - After refreshing the page, the condition showpassword == "yes" became true.
   - The website revealed the password for natas12.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Learned how client-side cookies can be modified by users.
   - Understood that XOR encryption is reversible and not secure for protecting sensitive data.
   - Understood how authorization logic can depend on insecure client-side data.
 
-## Real-World Mapping:
+#### Real-World Mapping:
   - Web applications often store user roles or flags in cookies.
   - If cookies are only encrypted and not signed, attackers can forge them.
 
-## Bug Class:
+#### Bug Class:
 Broken Authentication / Insecure Cryptographic Design
 The application trusts encrypted client-side data for access control, allowing attackers to modify and re-encrypt cookies.
 
-## Conclusion:
+#### Conclusion:
   - This challenge showed that encryption alone is not security.
   - Using XOR without integrity checks makes data fully attacker-controlled.
   - Trusting client-side cookies for authorization leads to logic bypasses.
