@@ -1,8 +1,8 @@
 #### Challenge:
-Start here:
-Username: natas1
-Password: ( Password obtained from previous level ) 
-URL:      http://natas1.natas.labs.overthewire.org 
+- Start here:
+- Username: natas1
+- Password: ( Password obtained from previous level ) 
+- URL:   http://natas1.natas.labs.overthewire.org 
 
 #### My Path:
 Method 1:
