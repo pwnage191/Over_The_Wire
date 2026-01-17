@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas10
-Password: ( Password obtained from previous level ) 
-URL:      http://natas10.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas10
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas10.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - It showed an input box labeled 'Find words containing' and a view page source link.
   - I clicked view page source. It contained the php logic code.
@@ -23,19 +23,19 @@ URL:      http://natas10.natas.labs.overthewire.org
   - Payloads: 1 /etc/natas_webpass/natas11, .* /etc/natas_webpass/natas11, the key part is the space + filename injection.
   - It revealed the next level password.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Understand how input flows into system commands via passthru().
   - Learn that filtering some characters is not enough for preventing injection.
   - Discover how grep accepts multiple filenames as arguments.
   - Observe how wildcard patterns like .* behave in command execution.
 
-## Real-World Mapping:
+#### Real-World Mapping:
   - Partial input sanitization still leaves applications vulnerable.
   - Attackers often bypass blacklists by abusing existing program features.
 
-## Bug Class:
+#### Bug Class:
 Command Injection – untrusted user input is interpreted as part of a system command instead of treated as plain text.
 
-## Conclusion:
+#### Conclusion:
 The input was passed directly into a shell command without proper sanitization, allowing us to inject another filename. This
 led to arbitrary file read using grep, revealing the next level password.
