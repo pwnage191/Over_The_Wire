@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas8
-Password: ( Password obtained from previous level ) 
-URL:      http://natas8.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas8
+- Password: ( Password obtained from previous level ) 
+- URL:      http://natas8.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - That website showed an input box and view page source link.
   - When I clicked view page source, it displayed the source code & contained the php code.
@@ -13,14 +13,14 @@ URL:      http://natas8.natas.labs.overthewire.org
   - I used cyberchef to reverse the encoding, first convert into hex, reverse and base64. I found the secret.
   - I entered the secret into the input box and clicked submit, it revealed the next level password.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Reverse encoding steps (hex → reverse → base64).
   - Use tools (CyberChef) to transform encoded values.
 
-## Real-world mapping:
+#### Real-world mapping:
   - Developers accidentally expose logic that reveals secrets.
   - Attackers can reverse encoding to extract sensitive data.
 
-## Bug class:
+#### Bug class:
   - Improper information disclosure.
   - Client-side reversible encoding.
