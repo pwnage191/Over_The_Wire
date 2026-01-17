@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas5
-Password: ( Password obtained from previous level ) 
-URL:      http://natas5.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas5
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas5.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website & login by using username and password.
   - The web paged showed "Access disallowed. You are not logged in".
   - I used burp suite to intercept the request.
@@ -12,20 +12,20 @@ URL:      http://natas5.natas.labs.overthewire.org
   - I changed to loggedin=1.
   - Permission granted for that webpage and revealed the next level password.
 
-## Learning outcomes:
+#### Learning outcomes:
   - Learned that login state can be tracked using cookies.
   - Observed that cookie values can be modified by the client.
   - Saw how weak server-side validation leads to authorization bypass.
 
-## Real world mapping:
+#### Real world mapping:
   - Websites sometimes rely on insecure cookies to identify logged-in users.
   - Attackers can manipulate cookies to escalate privileges or bypass authentication.
 
-## Bug class:
+#### Bug class:
   - Improper Access Control – trusting client-side cookie values.
   - Broken Authentication – login state not validated server-side.
 
-## Conclusion:
+#### Conclusion:
 By intercepting the request and modifying the cookie value from loggedin=0 to loggedin=1, the server granted access and revealed 
 the password, demonstrating how insecure cookie-based authorization can be manipulated to bypass security in real systems.
  
