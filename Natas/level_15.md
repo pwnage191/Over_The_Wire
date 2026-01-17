@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas15
-Password: ( Password obtained from previous level ) 
-URL:      http://natas15.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas15
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas15.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website using credentials.
   - It asked to enter the username. It only checks whether the username exists.
   - Entering a single quote (') was handled normally,The application responded with ‘This user doesn’t exist’, indicating that 
@@ -26,7 +26,7 @@ URL:      http://natas15.natas.labs.overthewire.org
   - Observe the application's true/false response.
   - Append the correct character when the condition evaluates to true.
 
-## Script:
+#### Script:
 import requests
 import re
 import string
@@ -45,22 +45,22 @@ while len(nataspass) < 32:
 			print(nataspass)
 			break
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Identified blind SQL injection without seeing query output.
   - Learned how boolean-based responses can leak sensitive data.
   - Observed how automation helps extract data.
 
-## Real-World Mapping:
+#### Real-World Mapping:
   - Login or user-validation endpoints that return different messages can leak information.
   - Applications that only return true/false responses are still vulnerable to data extraction.
   - Blind SQL injection is common in production systems with suppressed error messages.
 
-## Bug Class:
+#### Bug Class:
   - Boolean-Based Blind SQL Injection
   - Happens when user input is used in an SQL query and the application shows different responses 
     for true or false conditions, allowing data to be guessed without seeing the output.
 
-## Conclusion:
+#### Conclusion:
 This challenge showed that by observing response differences and using boolean logic, sensitive data can still be extracted.
 It highlights the importance of proper input validation and secure query handling.
   
