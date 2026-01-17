@@ -1,10 +1,10 @@
-## Challenge:
+#### Challenge:
 Start here:
 Username: natas2
 Password: ( Password obtained from previous level ) 
 URL:      http://natas2.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website, it shows "There is nothing on this page".
   - I opened view page source, I saw the image url, clicked it.
   - I tried zooming in on the image, thinking there may be hidden information.
@@ -14,20 +14,20 @@ URL:      http://natas2.natas.labs.overthewire.org
   - I went to the parent directory, it showed the list of file names. One of the file names was "users.txt".
   - The file contains the password for the next level.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Identified file paths in URLs as clues.
   - Navigated directories manually to access files.
   - Found sensitive data inside publicly accessible files.
 
-## Real-World Mapping:
+#### Real-World Mapping:
   - Directory listing can expose sensitive information.
   - URLs and file paths can reveal server structure.
  
-## Bug class:
+#### Bug class:
   - Directory Listing / Directory Browsing enabled – the server allows users to view internal folder contents.
   - Information Disclosure – sensitive information becomes visible to users who shouldn’t see it.
 
-## Conclusion: 
+#### Conclusion: 
 Discovering hidden directories and exposed files revealed the sensitive informations, demonstrating how simple misconfigurations 
 can lead to information disclosure.
  
