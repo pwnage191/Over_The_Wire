@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas12
-Password: ( Password obtained from previous level ) 
-URL:      http://natas12.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas12
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas12.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - The page showed a file upload form with the message: "Choose a JPEG to upload (max 1KB)".
   - I noticed a view sourcecode link and clicked it.
@@ -27,16 +27,16 @@ URL:      http://natas12.natas.labs.overthewire.org
   - I clicked the uploaded file URL. Because the file extension was .php, the server executed the php code.
   - It revealed the next level password.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Learned how file upload vulnerabilities occur due to missing validation.
   - Learned that user-controlled filename fields are dangerous.
 
-## Real World Mapping:
+#### Real World Mapping:
 If file type validation is weak, this often leads to remote code execution (RCE).
 
-## Bug Class:
+#### Bug Class:
 Unrestricted File Upload
 The application allows attackers to upload and execute arbitrary files because it does not properly validate file type or content.
 
-## Conclusion:
+#### Conclusion:
 This challenge shows how trusting user-controlled file uploads can lead directly to remote code execution.
