@@ -1,10 +1,10 @@
-## Challenge:
+#### Challenge:
 Start here:
 Username: natas1
 Password: ( Password obtained from previous level ) 
 URL:      http://natas1.natas.labs.overthewire.org 
 
-## My Path:
+#### My Path:
 Method 1:
   - I opened the website.
   - It shows "You can find the password for the next level on this page, but rightclicking has been blocked!"
@@ -26,19 +26,19 @@ Method 3:
   - Reload the page to bypass the right-click block.
   - Now, it allows you to right-click.
 
-## Learning outcomes:
+#### Learning outcomes:
   - Use browser shortcuts (Ctrl+U, F12)
   - Bypass simple client-side restrictions
   - Understand that right-click blocking is not real security
   - Disable JavaScript to remove page restrictions
 
-## Real-world mapping
+#### Real-world mapping
   - Client-side protection is weak
   - Security through obscurity fails: Developers hiding passwords in page source = insecure practice.
   - JavaScript-dependent security is breakable: If security depends only on JS, users can disable it.
   - Finding sensitive data exposure: Similar mistakes happen in real web apps (API keys, credentials leaked).
 
-## Conclusion: 
+#### Conclusion: 
   This challenge demonstrates that client-side restrictions can be easily bypassed using developer tools. Never rely on 
 JavaScript or UI blocks for real security.
 
