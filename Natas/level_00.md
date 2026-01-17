@@ -1,8 +1,8 @@
 #### Challenge
-Start here:
-Username: natas0
-Password: natas0
-URL:      http://natas0.natas.labs.overthewire.org
+- Start here:
+- Username: natas0
+- Password: natas0
+- URL: http://natas0.natas.labs.overthewire.org
 
 #### My path: 
   - I opened the website in browser.
