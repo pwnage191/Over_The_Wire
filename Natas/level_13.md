@@ -1,10 +1,10 @@
-## Challenge:
-Start here:
-Username: natas13
-Password: ( Password obtained from previous level ) 
-URL:      http://natas13.natas.labs.overthewire.org 
+#### Challenge:
+- Start here:
+- Username: natas13
+- Password: ( Password obtained from previous level ) 
+- URL: http://natas13.natas.labs.overthewire.org 
 
-## My path: 
+#### My path: 
   - I opened the website.
   - The page showed a file upload form with the message: "Choose a JPEG to upload (max 1KB)".
   - I noticed a view sourcecode link and clicked it.
@@ -24,24 +24,26 @@ URL:      http://natas13.natas.labs.overthewire.org
   - I clicked the uploaded file URL. Because the file extension was .php, the server executed the php code.
   - It revealed the next level password.
 
-## File Upload Bypass Logic:
-      I uploaded the file with the .jpg extension, but the actual file type and content were php. I modified the magic header of the
-file to bypass the security check. PHP reads the code only from the <?php tag, and any data before it is treated as garbage.I changed 
-the hidden field from filename=random.jpg to filename=random.php, which sent the file to the PHP interpreter and caused it to execute.
+#### File Upload Bypass Logic:
+  - I uploaded the file with the .jpg extension, but the actual file type and content were php.
+  - I modified the magic header of the file to bypass the security check.
+  - PHP reads the code only from the <?php tag, and any data before it is treated as garbage.
+  - I changed the hidden field from filename=random.jpg to filename=random.php, which sent the file to the PHP interpreter and
+    caused it to execute.
 
-## Learning Outcomes:
+#### Learning Outcomes:
   - Learned that PHP interprets code only from the <?php tag, ignoring preceding binary data.
   - Identified the risk of trusting partial server-side validation (header-only checks).
 
-## Real‑World Mapping:
+#### Real‑World Mapping:
   - Systems that validate only file extension or magic bytes, not full file content.
   - Upload directories configured as executable, allowing scripts to run.
   - Leads to Remote Code Execution (RCE), data theft, or full server takeover.
 
-## Bug Class:
+#### Bug Class:
 Insecure File Upload
 Failure to properly validate uploaded files allows attackers to execute arbitrary code on the server.
 
-## Conclusion:
+#### Conclusion:
 This challenge demonstrates how relying only on file headers for validation is insufficient.
 Proper file handling must include strict content validation and storing uploads outside the web root.
