@@ -1,5 +1,5 @@
 ### Level Info
-- **Level:** Bandit 0
+- **Level:** Level 0 - 1
 - **Category:** Linux / File Read / etc.
 
 ### Goal
