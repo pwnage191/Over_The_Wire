@@ -1,6 +1,6 @@
 ### Level Info
 - **Level:** Bandit Level 10 - Level 11
-- **Category:** Search word
+- **Category:** Encoding
 
 ### Goal
 The password for the next level is stored in the file **data.txt**, which contains Base64 encoded data.
