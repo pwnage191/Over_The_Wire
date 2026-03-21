@@ -8,7 +8,7 @@ level password.
 
 ### Walkthrough
 - Log in as bandit20.
-- <img width="600" height="110" alt="image" src="https://github.com/user-attachments/assets/67827a50-bc7e-4d28-8cc3-3163c6740b06" />
+- <img width="700" height="110" alt="image" src="https://github.com/user-attachments/assets/67827a50-bc7e-4d28-8cc3-3163c6740b06" />
 - Observed the setuid binary:
   - `./suconnect`.  
 - Managed two sessions:
@@ -16,8 +16,8 @@ level password.
 	  - Started a listener on a chosen port: `nc -lvp 4444` in one session.
 - In the second session, executed:
   - `./suconnect 4444`.
-  - <img width="770" height="165" alt="image" src="https://github.com/user-attachments/assets/59481539-1961-4338-bac8-5c1162a697b4" />
-  - <img width="670" height="85" alt="image" src="https://github.com/user-attachments/assets/abc0dec7-a29f-487d-bbe2-644a11470750" />
+  - <img width="700" height="165" alt="image" src="https://github.com/user-attachments/assets/59481539-1961-4338-bac8-5c1162a697b4" />
+  - <img width="700" height="85" alt="image" src="https://github.com/user-attachments/assets/abc0dec7-a29f-487d-bbe2-644a11470750" />
 - Understood the flow:
 	  - `suconnect` connects to `localhost:4444`.  
 	  - It waits for input from the listener.  
@@ -26,8 +26,8 @@ level password.
   - Reads the password.  
   - Compares it with the correct password.  
   - If correct, returns the next level password.
-  - <img width="1174" height="192" alt="image" src="https://github.com/user-attachments/assets/35f6b505-7993-4ccf-b6f0-82ab977a852c" />
-  - <img width="804" height="157" alt="image" src="https://github.com/user-attachments/assets/12309649-2219-430e-be32-6969fa281089" />
+  - <img width="700" height="192" alt="image" src="https://github.com/user-attachments/assets/35f6b505-7993-4ccf-b6f0-82ab977a852c" />
+  - <img width="700" height="157" alt="image" src="https://github.com/user-attachments/assets/12309649-2219-430e-be32-6969fa281089" />
 
 ### What I Learned
 - In this level, `nc` acts as the server while `suconnect` acts as the client.  
