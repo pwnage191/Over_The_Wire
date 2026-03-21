@@ -12,9 +12,9 @@ The password for the next level is stored in the file **data.txt**, which is a h
 - View the first few lines using `head -2 data.txt ` -> confirms hexadecimal format.  
 
 - Create a working directory:
-  - `cd /tmp`.
-  - `mkdir challenger`.
-  - `cd challenger`.
+  - `cd /tmp`
+  - `mkdir challenger`
+  - `cd challenger`
   - `/tmp` is used because the home directory is shared/read-only in OverTheWire, so a temporary workspace is required.  
 
 - Copy the file:
