@@ -8,7 +8,7 @@ password can be found in `/etc/bandit_pass` after using the setuid binary.
 
 ### Walkthrough
 - Observed a setuid binary in the home directory: ( ls -l )
-  - `./bandit20-do` 
+  - `bandit20-do` 
   - <img width="600" height="105" alt="image" src="https://github.com/user-attachments/assets/a129fbe1-2175-473d-a1fa-acbc5b1d1186" />
 - Understood that:
   - Setuid means the program runs with the permissions of the file owner, not the user who executes it.  
