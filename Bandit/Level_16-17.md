@@ -10,7 +10,8 @@ range 31000 to 32000.
 - Logged into bandit16 using the obtained password.  
 - Scanned the port range to identify active services:
 	- `nmap -sV localhost -p 31000-32000`. 
-- Observed multiple open ports and checked which ones supported SSL/TLS.  
+- Observed multiple open ports and checked which ones supported SSL/TLS.
+- <img width="689" height="215" alt="image" src="https://github.com/user-attachments/assets/5e268359-3234-4a33-880d-4516a28d47c5" />
 - Connected to the SSL/TLS-enabled port:
 	- `ncat --ssl localhost 31790`.  
 - Entered the current level password.  
