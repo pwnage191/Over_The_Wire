@@ -24,6 +24,8 @@ bandit29-git is the same as bandit29. Clone the repository from your local machi
 - Found branches:
 - <img width="600" height="272" alt="image" src="https://github.com/user-attachments/assets/caa1a107-9395-4774-bfce-ddaaa3565e04" />
 - Switched to `dev` branch because the clue "not in production" directly points to a development environment.
+- Based on the clue, I first checked the dev branch because it represents the general development environment.
+- If the password was not found there, I would continue checking other non-production branches like sploits-dev.
 - <img width="600" height="494" alt="image" src="https://github.com/user-attachments/assets/9836200a-2212-4b3b-94a3-eee44c8a661c" />
 - Read the file: `cat README.md`
 
