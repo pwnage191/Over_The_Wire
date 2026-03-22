@@ -37,6 +37,3 @@ user bandit30-git is the same as bandit30. Clone the repository from your local 
 - Sensitive data can be stored in Git references like tags.  
 - Even if files and branches are clean, metadata can expose secrets.  
 
-### Security Insight
-- Sensitive data can be stored in Git references like tags.  
-- Even if files and branches are clean, metadata can expose secrets.  
