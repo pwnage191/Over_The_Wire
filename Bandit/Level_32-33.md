@@ -13,6 +13,8 @@ Escape the restricted shell and retrieve the password for the next level.
 - This spawns a new shell instance without restrictions
 - Retrieve the password using `cat /etc/bandit_pass/bandit33`
 - <img width="673" height="374" alt="image" src="https://github.com/user-attachments/assets/965fdead-7d1e-495c-99c4-71033f9d565f" />
+- $SHELL shows the restricted login shell, while $0 shows the actual running shell, which can be used to escape restrictions.
+- <img width="658" height="139" alt="image" src="https://github.com/user-attachments/assets/73c1c6e5-c289-4fe7-8231-811098d9f574" />
 
 ### What I Learned
 - Restricted shells can modify input before execution, such as converting to uppercase
