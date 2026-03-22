@@ -28,7 +28,8 @@ need to create new connections each time.
   done | nc localhost 30002 | grep -v "Wrong"
   ```
   - One correct combination returns the valid response.
-
+  - <img width="700" height="143" alt="image" src="https://github.com/user-attachments/assets/338ace3b-6f67-4168-a2d6-dc7975b95d89" />
+  - <img width="700" height="295" alt="image" src="https://github.com/user-attachments/assets/1ee6dc03-f946-4e3d-83f9-78e30316cba3" />
 - Why single connection is enough:
   - The daemon reads input from stdin line by line.
   - Piping all 10000 combinations sends them as a continuous stream.
