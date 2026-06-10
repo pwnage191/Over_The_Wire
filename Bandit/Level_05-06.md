@@ -18,10 +18,10 @@ The password for the next level is stored in a file somewhere under the **inhere
 - ` find . -type f -size 1033c ! -executable` , It displays the path of the matching file
 - `f` refers to the file, `1033c refers to 1033 bytes`
 - Read the content of the file by using cat command and obtained the password for the next level.
-- 
+  
 ### What I Learned
 - Learned how to use the `find` command with multiple filters simultaneously, this is more efficient than manually checking files
-- across nested directories.
+ across nested directories.
 
 ### Security Insight
 - Filtering files based on size, type, and permissions helps identify sensitive data efficiently in large directory structures
