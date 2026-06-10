@@ -8,7 +8,7 @@ The password for the next level is stored in the file **data.txt**, which is a h
 ### Walkthrough
 - Log into bandit12 using the obtained password.  
 - Enumerate the files using `ls -l`, which shows `data.txt`.  
-- Check the file type → ASCII text.  
+- Check the file type -> ASCII text.  
 - View the first few lines using `head -2 data.txt ` -> confirms hexadecimal format.  
 
 - Create a working directory:
