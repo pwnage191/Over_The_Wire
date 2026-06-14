@@ -25,12 +25,12 @@ Find out what it is, how it works, and how to break out of it.
 - This allows interaction using keys like `space`, `enter`, `q`, and `v`.
 - Press `v` to open the content in vim.
 - Inside vim:` :set shell=/bin/bash`
-- <img width="700" height="280" alt="image" src="https://github.com/user-attachments/assets/1857fecc-b661-4dc6-a66b-308cc30bee9d" />
+- <img width="700"  alt="image" src="https://github.com/user-attachments/assets/1857fecc-b661-4dc6-a66b-308cc30bee9d" />
 - Then press Enter, and type `:shell`
-- <img width="700" height="279" alt="image" src="https://github.com/user-attachments/assets/4578badf-8573-45fc-a0fe-618a4dfada9b" />
+- <img width="700"  alt="image" src="https://github.com/user-attachments/assets/4578badf-8573-45fc-a0fe-618a4dfada9b" />
 - This spawns a shell as bandit26.
 - Read the password: `cat /etc/bandit_pass/bandit26`
-- <img width="700" height="262" alt="image" src="https://github.com/user-attachments/assets/278dc283-c681-4fcd-ad69-a1cb2b70d4df" />
+- <img width="700"  alt="image" src="https://github.com/user-attachments/assets/278dc283-c681-4fcd-ad69-a1cb2b70d4df" />
 - `:set shell=/bin/bash` sets the shell that vim will use, and `:shell` spawns an interactive bash shell using that setting, allowing
    command execution.
 
