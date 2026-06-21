@@ -20,8 +20,8 @@
 - The password was revealed in the `ltrace` output.
 - Entered the correct password and gained access as `leviathan2`.
 - <img width="700" alt="image" src="https://github.com/user-attachments/assets/0eaa909d-732e-43c2-bdd6-f7826d5a2feb" />
-- <img width="700" alt="image" src="https://github.com/user-attachments/assets/2bb109ea-4c8d-4025-9cdd-1221da5aadab" />
-- <img width="700" alt="image" src="https://github.com/user-attachments/assets/83395c40-7905-4d2c-a5d3-b9dc2d27c96a" />
+- <img width="400" alt="image" src="https://github.com/user-attachments/assets/2bb109ea-4c8d-4025-9cdd-1221da5aadab" />
+- <img width="700" alt="image" src="https://github.com/user-attachments/assets/e8f6889b-be20-4112-84a9-e4d0428a37f9" />
 - Read the next level's password from:
   ```bash
   cat /etc/leviathan_pass/leviathan2
