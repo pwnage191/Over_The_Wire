@@ -19,3 +19,5 @@
 ### Learning Drops
 - Hidden files can contain sensitive information and should always be checked during enumeration.
 - `ls -la` is essential for discovering hidden files and viewing file permissions.
+- `grep -i` performs a case-insensitive search, making it useful when the exact capitalization is unknown.
+
