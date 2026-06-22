@@ -15,14 +15,15 @@
   ```bash
   ~/printfile test.txt
   ```
-- <img width="700" alt="image" src="https://github.com/user-attachments/assets/3bfe390d-5962-40c2-aca9-053a3b81b722" />
-- Noticed that `/etc/leviathan_pass/leviathan3` is readable only by `leviathan3`.
+- <img width="700" alt="image" src="https://github.com/user-attachments/assets/88567cc0-93f2-484d-800f-63427cf76da7" />
+- Observed that the program performs an `access()` check before executing a command through `system()`.
+- Since `leviathan2` could not directly read `/etc/leviathan_pass/leviathan3`, I created a symbolic link to the password file and tested whether the
+  SUID binary would follow the link.
 - Created a symbolic link to the password file:
   ```bash
   ln -s /etc/leviathan_pass/leviathan3 lev_3
   ```
 - Used `ltrace` to analyze the program and identify the library functions it uses.
-- Observed that the program performs an `access()` check before executing a command through `system()`.
 - Attempted to read the password through the symbolic link:
   ```bash
   ~/printfile lev_3
@@ -38,7 +39,7 @@
   ~/printfile "test.txt lev_3"
   ```
 - The password was displayed because:
-  - `access()` treated `"test.txt lev_3"` as a single filename and the check succeeded.
+  - `access()` treated `"test.txt lev_3"` as a single filename and verified that `leviathan2` had permission to access that file.
   - The filename was later passed to `system()` without proper quoting.
   - The shell split the filename into two arguments:
     ```bash
