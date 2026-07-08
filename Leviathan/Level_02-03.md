@@ -48,7 +48,7 @@
   - The command executed with the privileges of `leviathan3` because the binary is SUID.
   - `cat` followed the symbolic link `lev_3` and read `/etc/leviathan_pass/leviathan3`.
   - <img width="700" alt="image" src="https://github.com/user-attachments/assets/66c00c3d-6814-40be-bf4b-2714e98f31b4" />
-  - ~/printfile "test.txt lev" runs the setuid program normally, so it keeps its effective UID (EUID) (leviathan3). As a result, cat can follow the lev symlink, read /etc/leviathan_pass/leviathan3, and print the password.
+  - ~/printfile "test.txt lev_3" runs the setuid program normally, so it keeps its effective UID (EUID) (leviathan3). As a result, cat can follow the lev symlink, read /etc/leviathan_pass/leviathan3, and print the password.
   - ltrace ~/printfile "test.txt lev" runs the program under a tracer. For security, the setuid privileges are disabled or restricted, so cat runs without the elevated EUID and cannot read /etc/leviathan_pass/leviathan3, resulting in Permission denied instead of the password.
 
 ### Learning Drops
