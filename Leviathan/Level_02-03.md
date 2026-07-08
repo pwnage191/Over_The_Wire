@@ -48,9 +48,11 @@
   - The command executed with the privileges of `leviathan3` because the binary is SUID.
   - `cat` followed the symbolic link `lev_3` and read `/etc/leviathan_pass/leviathan3`.
   - <img width="700" alt="image" src="https://github.com/user-attachments/assets/66c00c3d-6814-40be-bf4b-2714e98f31b4" />
+  - ~/printfile "test.txt lev" runs the setuid program normally, so it keeps its effective UID (EUID) (leviathan3). As a result, cat can follow the lev symlink, read /etc/leviathan_pass/leviathan3, and print the password.
+  - ltrace ~/printfile "test.txt lev" runs the program under a tracer. For security, the setuid privileges are disabled or restricted, so cat runs without the elevated EUID and cannot read /etc/leviathan_pass/leviathan3, resulting in Permission denied instead of the password.
 
 ### Learning Drops
-- `access()` checks permissions using the real user ID rather than the effective user ID.
-- User input should never be passed directly to `system()` without proper quoting or sanitization.
-- Symbolic links can be used to redirect file access during exploitation.
-- Security checks can fail when validation and execution interpret the same input differently.
+- `access()` checks permissions using the Real User ID (RUID), while file operations like `open()` use the Effective User ID (EUID).
+- Passing user input directly to `system()` without proper validation or escaping can introduce command injection vulnerabilities.
+- Symbolic links can redirect file access to unintended locations when a program follows them.
+- Validation and execution should interpret user input consistently to avoid security flaws (e.g., `access()` checks one filename while `system()` interprets it as multiple arguments).
