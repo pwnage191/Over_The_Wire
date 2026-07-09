@@ -3,7 +3,7 @@
 - Category: Brute Force Attack
 
 ### Discovery path
- I started by exploring the file system and found a binary file (`leviathan6`) with the SetUID permission.
+- I started by exploring the file system and found a binary file (`leviathan6`) with the SetUID permission.
 - I ran the binary program, and it prompted me to enter a 4-digit code.
 - <img width="800" alt="image" src="https://github.com/user-attachments/assets/04586f90-e096-4133-94df-7db7425d426f" />
 - I used `ltrace` to analyze the program and observed that it called `atoi()` to convert the input string into an integer.
